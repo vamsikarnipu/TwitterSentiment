@@ -1,5 +1,5 @@
-streamlit
-numpy
-pandas
-nltk
-tensorflow
+streamlit==1.24.0
+numpy==1.24.4
+pandas==2.2.2
+nltk==3.8.1
+tensorflow==2.14.0
