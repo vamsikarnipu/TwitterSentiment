@@ -19,18 +19,9 @@ nltk.download('wordnet')
 lm = WordNetLemmatizer()
 
 # Load the model from the specified path
-model_path = r"Twitter.h5"
-
-try:
-    model = load_model(model_path)
-    model.summary()
-    st.success("Model loaded successfully!")
-except Exception as e:
-    st.error(f"Error loading model: {e}")
-    model = None
+model = load_model('Twitter.h5')
 
 def newinput(comment):
-    try:
         review = re.sub('[^a-zA-Z]', ' ', comment)
         review = review.lower()
         review = review.split()
@@ -47,11 +38,6 @@ def newinput(comment):
             else:
                 result = 'positive'
             return result
-        else:
-            return "Model not loaded."
-    except Exception as e:
-        st.error(f"Error processing input: {e}")
-        return "Error processing input."
 
 def main():
     # Giving a title name
