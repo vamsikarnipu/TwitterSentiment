@@ -19,7 +19,7 @@ nltk.download('wordnet')
 lm = WordNetLemmatizer()
 
 # Load the model from the specified path
-model_path = r"D:\projects\twitter\Twitter.h5"
+model_path = r"Twitter.h5"
 
 try:
     model = load_model(model_path)
